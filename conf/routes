@@ -1,0 +1,17 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+POST    /api/v1/maps            controllers.MapController.create
+GET     /api/v1/maps/:id/move   controllers.MapController.move(id: Int)
+#GET     /api/v1/maps/:id       controllers.MapController.getMap(id: Int)
+#GET     /api/v1/maps           controllers.MapController.getMaps
+
+POST    /api/v1/taxis           controllers.TaxiController.create
+#GET     /api/v1/taxis/:id      controllers.TaxiController.getTaxi(id: Int)
+#GET     /api/v1/taxis          controllers.TaxiController.getTaxis
+
+POST    /api/v1/passengers  controllers.PassengerController.create
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
